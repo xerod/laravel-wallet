@@ -53,7 +53,7 @@ trait HasWallet
             $this->wallet->save();
         }
 
-        $this->wallet->transactions()
+        return $this->wallet->transactions()
             ->create([
                 'amount' => $amount,
                 'hash' => uniqid('lwch_'),
@@ -92,7 +92,7 @@ trait HasWallet
             $this->wallet->save();
         }
 
-        $this->wallet->transactions()
+        return $this->wallet->transactions()
             ->create([
                 'amount' => $amount,
                 'hash' => uniqid('lwch_'),
